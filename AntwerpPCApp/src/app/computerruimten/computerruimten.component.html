@@ -22,7 +22,8 @@ OBJECTID: number;
 
 
 <ul *ngFor='let pcruimte of pcruimten'>
-    <li>{{ pcruimte.attributes.NAAM }},
-        {{pcruimte.attributes.STRAATNAAM}} {{pcruimte.attributes.HUISNUMMER}}, {{pcruimte.attributes.POSTCODE}} {{pcruimte.attributes.DISTRICT}}
+    <li><h4>{{ pcruimte.attributes.NAAM }}</h4>
+        <p>{{pcruimte.attributes.STRAATNAAM}} {{pcruimte.attributes.HUISNUMMER}} </p>
+        <p>{{pcruimte.attributes.POSTCODE}} {{pcruimte.attributes.DISTRICT}}</p>
          </li>
   </ul>
