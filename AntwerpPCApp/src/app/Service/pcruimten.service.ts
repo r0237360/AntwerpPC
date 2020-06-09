@@ -15,8 +15,8 @@ export class PcruimtenService {
   /* http.get returns an observable. 
   Er is waarschijnlijk ook steeds meer dan 1 object dus er is een array nodig [] van objecten die gedefinieerd zijn in je klasse.
   In dit geval is de "root" klasse RootObject */
-   getPcRuimten(): Observable<RootObject[]>{
-    return this.http.get<RootObject[]>(this._url);
+   getPcRuimten(): Observable<RootObject>{
+    return this.http.get<RootObject>(this._url);
   }
 
 

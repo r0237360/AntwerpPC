@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PcruimtenService } from '../Service/pcruimten.service';
 
 @Component({
   selector: 'app-computerruimten',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComputerruimtenComponent implements OnInit {
 
-  constructor() { }
+  //init an array
+  public pcruimten = [];
+  
+  // use DI so the service can be consumed
+  constructor(private _pcRuimtenService: PcruimtenService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   this._pcRuimtenService.getPcRuimten()
+      .subscribe(data => this.pcruimten = data.features); 
+
+     this._pcRuimtenService.getPcRuimten()
+      .subscribe((data)=>{console.log(data.features);});
+ 
   }
 
 }
