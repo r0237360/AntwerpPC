@@ -1,6 +1,28 @@
-<p>computerruimten works!</p>
+<!-- <p>computerruimten works!</p> -->
+
+<h2>Beschikbare computer ruimtes in Antwerpen: </h2>
+
+<!-- lijst van attributes (zie ook in de klasse)
+OBJECTID: number;
+        NAAM: string;
+        STRAATNAAM: string;
+        HUISNUMMER: string;
+        POSTCODE: string;
+        DISTRICT: string;
+        TYPE: string;
+        BEGELEIDING: string;
+        TELEFOON: string;
+        OPENINGSUREN: string;
+        KOSTPRIJS: string;
+        BEGINDATUM?: any;
+        OPMERKING: string;
+        WEBSITE?: any;
+        GISID: string; -->
+
 
 
 <ul *ngFor='let pcruimte of pcruimten'>
-    <li>{{ pcruimte.attributes.NAAM }}</li>
+    <li>{{ pcruimte.attributes.NAAM }},
+        {{pcruimte.attributes.STRAATNAAM}} {{pcruimte.attributes.HUISNUMMER}}, {{pcruimte.attributes.POSTCODE}} {{pcruimte.attributes.DISTRICT}}
+         </li>
   </ul>
