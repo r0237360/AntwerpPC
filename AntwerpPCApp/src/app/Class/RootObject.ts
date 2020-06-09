@@ -1,4 +1,7 @@
-declare module namespace {
+
+// Deze informatie is het resultaat van een conversie van JSON naar typescript : http://json2ts.com/
+
+
 
     export interface FieldAliases {
         OBJECTID: string;
@@ -67,5 +70,5 @@ declare module namespace {
         features: Feature[];
     }
 
-}
+
 

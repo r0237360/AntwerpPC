@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComputerruimtenComponent } from './computerruimten/computerruimten.component';
+import { PcruimtenService} from './Service/pcruimten.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { ComputerruimtenComponent } from './computerruimten/computerruimten.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PcruimtenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
